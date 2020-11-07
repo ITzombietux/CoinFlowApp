@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		93F692252556488B00DEF8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F692242556488B00DEF8A0 /* AppDelegate.swift */; };
 		93F692272556488B00DEF8A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F692262556488B00DEF8A0 /* SceneDelegate.swift */; };
-		93F692292556488B00DEF8A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F692282556488B00DEF8A0 /* ViewController.swift */; };
 		93F6922C2556488B00DEF8A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F6922A2556488B00DEF8A0 /* Main.storyboard */; };
 		93F6922E2556488E00DEF8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F6922D2556488E00DEF8A0 /* Assets.xcassets */; };
 		93F692312556488E00DEF8A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F6922F2556488E00DEF8A0 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,9 @@
 		93F6925D2556498E00DEF8A0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6925C2556498E00DEF8A0 /* NewsViewController.swift */; };
 		93F692622556499800DEF8A0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F692612556499800DEF8A0 /* SettingViewController.swift */; };
 		93F69273255649F900DEF8A0 /* ChartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F69272255649F900DEF8A0 /* ChartDetailViewController.swift */; };
+		93F6927C2556563100DEF8A0 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F6927A2556563100DEF8A0 /* Chart.storyboard */; };
+		93F692812556565400DEF8A0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F692802556565400DEF8A0 /* News.storyboard */; };
+		93F692872556566B00DEF8A0 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F692852556566B00DEF8A0 /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,6 @@
 		93F692212556488B00DEF8A0 /* CoinFlowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinFlowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F692242556488B00DEF8A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F692262556488B00DEF8A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93F692282556488B00DEF8A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93F6922B2556488B00DEF8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93F6922D2556488E00DEF8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93F692302556488E00DEF8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		93F6925C2556498E00DEF8A0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		93F692612556499800DEF8A0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		93F69272255649F900DEF8A0 /* ChartDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewController.swift; sourceTree = "<group>"; };
+		93F6927B2556563100DEF8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chart.storyboard; sourceTree = "<group>"; };
+		93F692802556565400DEF8A0 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = News.storyboard; path = CoinFlowApp/News/News.storyboard; sourceTree = SOURCE_ROOT; };
+		93F692862556566B00DEF8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +113,6 @@
 			children = (
 				93F692242556488B00DEF8A0 /* AppDelegate.swift */,
 				93F692262556488B00DEF8A0 /* SceneDelegate.swift */,
-				93F692282556488B00DEF8A0 /* ViewController.swift */,
 				93F6922A2556488B00DEF8A0 /* Main.storyboard */,
 				93F6922D2556488E00DEF8A0 /* Assets.xcassets */,
 				93F6922F2556488E00DEF8A0 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 		93F69266255649CB00DEF8A0 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				93F6927A2556563100DEF8A0 /* Chart.storyboard */,
 				93F692572556497B00DEF8A0 /* ChartListViewController.swift */,
 				93F69272255649F900DEF8A0 /* ChartDetailViewController.swift */,
 			);
@@ -151,6 +155,7 @@
 		93F6926A255649D300DEF8A0 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				93F692802556565400DEF8A0 /* News.storyboard */,
 				93F6925C2556498E00DEF8A0 /* NewsViewController.swift */,
 			);
 			path = News;
@@ -159,6 +164,7 @@
 		93F6926E255649D700DEF8A0 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				93F692852556566B00DEF8A0 /* Setting.storyboard */,
 				93F692612556499800DEF8A0 /* SettingViewController.swift */,
 			);
 			path = Setting;
@@ -268,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				93F692312556488E00DEF8A0 /* LaunchScreen.storyboard in Resources */,
+				93F6927C2556563100DEF8A0 /* Chart.storyboard in Resources */,
+				93F692812556565400DEF8A0 /* News.storyboard in Resources */,
 				93F6922E2556488E00DEF8A0 /* Assets.xcassets in Resources */,
 				93F6922C2556488B00DEF8A0 /* Main.storyboard in Resources */,
+				93F692872556566B00DEF8A0 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93F69273255649F900DEF8A0 /* ChartDetailViewController.swift in Sources */,
-				93F692292556488B00DEF8A0 /* ViewController.swift in Sources */,
 				93F692582556497B00DEF8A0 /* ChartListViewController.swift in Sources */,
 				93F692252556488B00DEF8A0 /* AppDelegate.swift in Sources */,
 				93F6925D2556498E00DEF8A0 /* NewsViewController.swift in Sources */,
@@ -350,6 +358,22 @@
 				93F692302556488E00DEF8A0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		93F6927A2556563100DEF8A0 /* Chart.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F6927B2556563100DEF8A0 /* Base */,
+			);
+			name = Chart.storyboard;
+			sourceTree = "<group>";
+		};
+		93F692852556566B00DEF8A0 /* Setting.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93F692862556566B00DEF8A0 /* Base */,
+			);
+			name = Setting.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

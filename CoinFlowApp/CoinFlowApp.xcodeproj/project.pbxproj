@@ -21,6 +21,7 @@
 		93F6927C2556563100DEF8A0 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F6927A2556563100DEF8A0 /* Chart.storyboard */; };
 		93F692812556565400DEF8A0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F692802556565400DEF8A0 /* News.storyboard */; };
 		93F692872556566B00DEF8A0 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F692852556566B00DEF8A0 /* Setting.storyboard */; };
+		93F69400255F793A00DEF8A0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F693FF255F793A00DEF8A0 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		93F6927B2556563100DEF8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chart.storyboard; sourceTree = "<group>"; };
 		93F692802556565400DEF8A0 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = News.storyboard; path = CoinFlowApp/News/News.storyboard; sourceTree = SOURCE_ROOT; };
 		93F692862556566B00DEF8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
+		93F693FF255F793A00DEF8A0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				93F69266255649CB00DEF8A0 /* Chart */,
 				93F6926A255649D300DEF8A0 /* News */,
 				93F6926E255649D700DEF8A0 /* Setting */,
+				93F69404255F794000DEF8A0 /* Ext */,
 			);
 			path = CoinFlowApp;
 			sourceTree = "<group>";
@@ -168,6 +171,14 @@
 				93F692612556499800DEF8A0 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		93F69404255F794000DEF8A0 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				93F693FF255F793A00DEF8A0 /* UIColor.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93F69273255649F900DEF8A0 /* ChartDetailViewController.swift in Sources */,
+				93F69400255F793A00DEF8A0 /* UIColor.swift in Sources */,
 				93F692582556497B00DEF8A0 /* ChartListViewController.swift in Sources */,
 				93F692252556488B00DEF8A0 /* AppDelegate.swift in Sources */,
 				93F6925D2556498E00DEF8A0 /* NewsViewController.swift in Sources */,

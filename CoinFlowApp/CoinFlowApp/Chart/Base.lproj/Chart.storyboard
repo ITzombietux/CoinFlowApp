@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +17,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os4-i0-JcO">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WR9-1w-gcj"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGh-FA-MpC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GAy-Md-O2Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="15n-lg-XOZ"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="15" minimumInteritemSpacing="10" id="rt5-y8-iHD">
+                                            <size key="itemSize" width="350" height="200"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChartCardCell" id="NEH-UK-4kw" customClass="ChartCardCell" customModule="CoinFlowApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="0.0" width="350" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bFm-rl-x9C">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="rJ0-py-Ttx"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="2xj-YA-rHU"/>
+                                        </connections>
+                                    </collectionView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nf1-QM-SwI">
+                                        <rect key="frame" x="0.0" y="220" width="414" height="1500"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1500" id="TmE-QY-FSe"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChartListCell" id="VJP-hf-IPR" customClass="ChartListCell" customModule="CoinFlowApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJP-hf-IPR" id="ycL-zg-18F">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="yKW-Hn-CZS"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="mgK-ga-rfD"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nf1-QM-SwI" firstAttribute="top" secondItem="GAy-Md-O2Z" secondAttribute="bottom" constant="20" id="BAc-u9-DlP"/>
+                                    <constraint firstAttribute="trailing" secondItem="nf1-QM-SwI" secondAttribute="trailing" id="OXC-J4-C5s"/>
+                                    <constraint firstItem="GAy-Md-O2Z" firstAttribute="leading" secondItem="bGh-FA-MpC" secondAttribute="leading" id="PhC-J1-Jv9"/>
+                                    <constraint firstItem="GAy-Md-O2Z" firstAttribute="width" secondItem="bGh-FA-MpC" secondAttribute="width" id="S7u-NB-I4k"/>
+                                    <constraint firstAttribute="trailing" secondItem="GAy-Md-O2Z" secondAttribute="trailing" id="Ugr-pg-J1F"/>
+                                    <constraint firstItem="nf1-QM-SwI" firstAttribute="leading" secondItem="bGh-FA-MpC" secondAttribute="leading" id="X9a-Sc-lUw"/>
+                                    <constraint firstItem="GAy-Md-O2Z" firstAttribute="top" secondItem="bGh-FA-MpC" secondAttribute="top" id="d41-U0-7xn"/>
+                                    <constraint firstAttribute="bottom" secondItem="nf1-QM-SwI" secondAttribute="bottom" id="rZ7-Up-3Tq"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bGh-FA-MpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PRB-Pz-DiN"/>
+                            <constraint firstItem="bGh-FA-MpC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XBz-Py-e8M"/>
+                            <constraint firstItem="bGh-FA-MpC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zct-kT-0Ev"/>
+                            <constraint firstItem="bGh-FA-MpC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ok4-Ms-NFh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chart" id="pbt-Fp-unl"/>
+                    <connections>
+                        <outlet property="chartCollectionView" destination="GAy-Md-O2Z" id="ZHD-ay-PUr"/>
+                        <outlet property="chartTableView" destination="nf1-QM-SwI" id="hvz-iK-OAv"/>
+                        <outlet property="chartTableViewHeight" destination="TmE-QY-FSe" id="53y-Cu-yBn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
